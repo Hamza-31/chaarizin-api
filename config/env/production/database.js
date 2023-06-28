@@ -1,9 +1,9 @@
 const parseUrl = require('parse-url')
-var knex = require('knex');
+// var knex = require('knex');
 module.exports = ({ env }) => {
-	const { host, port, database, user, password } = parseUrl(env("JAWSDB_URL"));
+	const { host, port, database, user, password } = parseUrl(env("CLEARDB_DATABASE_URL"));
 
-	return knex({
+	return {
 		connection: {
 			client: 'mysql',
 			connection: {
@@ -16,5 +16,5 @@ module.exports = ({ env }) => {
 			},
 			debug: false,
 		},
-	})
+	}
 };
