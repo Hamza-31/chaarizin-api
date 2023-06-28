@@ -1,5 +1,6 @@
+const parseUrl = require('parse-url')
 module.exports = ({ env }) => {
-	const { host, port, database, user, password } = JSON.parse(env("CLEARDB_DATABASE_URL"));
+	const { host, port, database, user, password } = parseUrl(env("JAWSDB_URL"));
 
 	return {
 		connection: {

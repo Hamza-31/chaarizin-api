@@ -16,6 +16,7 @@
 		"@strapi/provider-email-sendgrid": "^4.11.2",
 		"@strapi/strapi": "4.11.0",
 		"mysql": "2.18.1",
+		"parse-url": "^8.1.0",
 		"strapi-plugin-meilisearch": "^0.9.2"
 	},
 	"author": {
