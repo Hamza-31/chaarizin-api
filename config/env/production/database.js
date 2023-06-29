@@ -1,8 +1,9 @@
 const parseUrl = require('parse-url')
+const knex = require('knex')
 module.exports = ({ env }) => {
 	const { host, port, database, user, password,protocol } = parseUrl(env("CLEARDB_DATABASE_URL"));
 
-	return {
+	return knex({
 		connection: {
 			client: protocol,
 			connection: {
@@ -15,5 +16,5 @@ module.exports = ({ env }) => {
 			},
 			debug: false,
 		},
-	}
+	})
 };
