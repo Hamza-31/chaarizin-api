@@ -5,7 +5,7 @@ module.exports = ({ env }) => {
 		connection: {
 			client: config['protocol'],
 			connection: {
-				host: config['host'],
+				host: config['resource'],
 				port: config['port'],
 				database: process.env.JAWS_DB,
 				user: config['user'],
