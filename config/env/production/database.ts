@@ -12,7 +12,13 @@ module.exports = ({ env }) => {
 				password: config['password'],
 				ssl: { rejectUnauthorized: false },
 			},
+			pool: {
+				min: 2,
+				max: 8
+			},
 			debug: false,
+
 		},
+
 	}
 };
