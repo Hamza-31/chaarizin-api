@@ -1,20 +1,21 @@
-const parseUrl = require('parse-url')
-const knex = require('knex')
+import parseUrl from 'parse-url';
+// import knex from 'knex';
+const config = parseUrl(process.env.CLEARDB_DATABASE_URL)
 module.exports = ({ env }) => {
-	const { protocol:client,host, port, database, user, password } = parseUrl(env("CLEARDB_DATABASE_URL"));
+	// const { protocol:client,host, port, database, user, password } = parseUrl(env("CLEARDB_DATABASE_URL"));
 
-	return knex({
+	return {
 		connection: {
-			client,
+			client: config['protocol'],
 			connection: {
-				host,
-				port,
-				database,
-				user,
-				password,
+				host: config['host'],
+				port: config['port'],
+				database: config['database'],
+				user: config['user'],
+				password: config['password'],
 				ssl: { rejectUnauthorized: false },
 			},
 			debug: false,
 		},
-	})
+	}
 };
