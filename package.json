@@ -14,6 +14,7 @@
 		"@strapi/plugin-i18n": "4.11.0",
 		"@strapi/plugin-users-permissions": "4.11.0",
 		"@strapi/provider-email-sendgrid": "^4.11.2",
+		"@strapi/provider-upload-aws-s3": "^4.11.3",
 		"@strapi/strapi": "4.11.0",
 		"mysql": "2.18.1",
 		"parse-url": "^8.1.0",
