@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "curl_clubs",
+  "info": {
+    "singularName": "curl-club",
+    "pluralName": "curl-clubs",
+    "displayName": "Curl Club"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
