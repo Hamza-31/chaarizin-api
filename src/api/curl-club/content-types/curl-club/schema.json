@@ -4,7 +4,8 @@
   "info": {
     "singularName": "curl-club",
     "pluralName": "curl-clubs",
-    "displayName": "Curl Club"
+    "displayName": "Curl Club",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +14,7 @@
   "attributes": {
     "content": {
       "type": "richtext",
-      "required": true
+      "required": false
     }
   }
 }
